@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  
+  <link rel="stylesheet" href="{% static 'css/login_signup.css' %}">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Slide Navbar</title>
+	<link rel="stylesheet" type="text/css" href="slide navbar style.css">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="main">  	
+		<input type="checkbox" id="chk" aria-hidden="true">
+
+			<div class="signup">
+				<form method="POST" action='register'>
+					{% csrf_token %}
+					<label for="chk" aria-hidden="true">Sign up</label>
+					<input type="text" name="first_name" placeholder="First Name" >
+					<input type="text" name="middle_name" placeholder="Middle Name" >
+					<input type="text" name="last_name" placeholder="Last Name" >
+					
+					<input type="number" name="age" placeholder="Age" >
+					<input type="number" name="phone_number" placeholder="Phone Number" >
+					<input type="email" name="email" placeholder="Email" >
+					<input type="password" name="password" placeholder="Password" >
+					<button>Sign up</button>
+				</form>
+			</div>
+
+			<div class="login">
+
+				<form method="POST" action="dashboard">
+					{% csrf_token %}
+					<label for="chk" aria-hidden="true">Login</label>
+					<input type="email" name="emails" placeholder="Email">
+					<input type="password" name="passwords" placeholder="Password" >
+					<button>Login</button>
+				</form>
+			</div>
+	</div>
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>

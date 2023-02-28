@@ -1,0 +1,229 @@
+
+body {
+	font-family: 'Open Sans', arial, sans-serif;
+	color: #333;
+	font-size: 14px;
+}
+.projcard-container {
+	margin: 50px 0;
+}
+
+/* Actual Code: */
+.projcard-container,
+.projcard-container * {
+	box-sizing: border-box;
+}
+.projcard-container {
+	margin-left: auto;
+	margin-right: auto;
+	width: 1000px;
+}
+.projcard {
+	position: relative;
+	width: 70%;
+	height: 250px;
+	margin-bottom: 40px;
+	border-radius: 10px;
+	background-color: #fff;
+	border: 2px solid #ddd;
+	font-size: 18px;
+	overflow: hidden;
+	cursor: pointer;
+	box-shadow: 0 4px 21px -12px rgba(0, 0, 0, .66);
+	transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.projcard:hover {
+	box-shadow: 0 34px 32px -33px rgba(0, 0, 0, .18);
+	transform: translate(0px, -3px);
+}
+
+
+}
+.projcard-textbox {
+	position: absolute;
+	top: 7%;
+	bottom: 7%;
+	left: 430px;
+	width: calc(100% - 470px);
+	font-size: 17px;
+}
+
+.projcard-textbox::after {
+	display: none;
+	left: initial;
+	right: -55px;
+}
+
+
+.projcard-textbox * {
+	position: relative;
+}
+.projcard-title {
+	font-family: 'Voces', 'Open Sans', arial, sans-serif;
+	font-size: 24px;
+}
+.projcard-subtitle {
+	font-family: 'Voces', 'Open Sans', arial, sans-serif;
+	color: #888;
+}
+.projcard-bar {
+	left: -2px;
+	width: 50px;
+	height: 5px;
+	margin: 10px 0;
+	border-radius: 5px;
+	background-color: #424242;
+}
+.projcard-blue .projcard-bar { background-color: #0088FF; }
+
+.projcard-description {
+	z-index: 10;
+	font-size: 15px;
+	color: #424242;
+	height: 125px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.projcard-tagbox {
+	position: absolute;
+	bottom: 3%;
+	font-size: 14px;
+	cursor: default;
+	user-select: none;
+	pointer-events: none;
+}
+.projcard-tag {
+	display: inline-block;
+	background: #E0E0E0;
+	color: #777;
+	border-radius: 3px 0 0 3px;
+	line-height: 26px;
+	padding: 0 10px 0 23px;
+	position: relative;
+	margin-left:600px;
+	cursor: default;
+	user-select: none;
+	transition: color 0.2s;
+}
+
+.contentContainer {
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-color: #E9EAED;
+  width: 100%;
+  height: 100%;
+  padding-top: 10%;
+  font-family: 'Roboto', sans-serif;
+}
+.twitter.boxContainer {
+  width: 410px;
+  height: 180px;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #FFFFFF;
+  /*   */
+}
+.twitter.boxContainer div.lineSplit {
+  width: 100%;
+  height: 1px;
+  background: #dcdee3;
+}
+.twitter.boxContainer .tweetHeader {
+  color: #8899a6;
+  font-size: 15px;
+  font-weight: 500;
+  overflow: hidden;
+  line-height: 35px;
+  margin-left: 30px;
+}
+.twitter.boxContainer .messageBox {
+  width: 93%;
+  padding: 5px;
+  resize: none;
+  height: 60px;
+  color: #292F33;
+  display: block;
+  font-size: 13px;
+  font-weight: 200;
+  margin: 10px auto;
+  border-radius: 3px;
+  border: 1px solid #a3d4f2;
+}
+.twitter.boxContainer .messageBox:focus {
+  outline: none;
+}
+.twitter.boxContainer .wordCounter {
+  background-color: transparent;
+  color: #8899a6;
+  display: inline-block;
+  width: 70%;
+  border: 0;
+  padding: 0 15px;
+  position: relative;
+  vertical-align: top;
+  top: 10px;
+  text-align: right;
+  font-size: 14px;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+}
+.twitter.boxContainer .postButton {
+  width: 80px;
+  height: 35px;
+  border: none;
+  float: right;
+  color: #FFFFFF;
+  display: block;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 3px;
+  margin: 0 10px 0 0;
+  background-color: #1b95e0;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  padding-left: 20px;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASgAAAEiCAMAAAB9Qr9NAAAAM1BMVEX////////////////////////////////////////////////////////////////////lEOhHAAAAEHRSTlMAECAwQFBgcICQoLDA0ODwVOCoyAAABQRJREFUeAHs2EFuwkAMhlEnTScIyIzvf9p2QyEQK+r+vSN88sL6AwAAAAAAAAAAAAAA+BfmdVuC80qZeQnOK/3agtLUbvknKCzXkS+CI/Pacy/4tNzy3Ra8mdaen9ZgZ76OPDCm4MVyz2MteGo9Cz14mC49Sy14ZBpZu0dFpp0lajIVByVTbY6aTE/XoI085deM757nTHZfP+zdzZKkKBiFYUBURH7O/V/t9KInYqajtE+hVmac/N51Vy+eKkgkFQuYmncfnc8gsrVm6uCq7ieKL8udFhvYovuJ8KqyOynsoCtODYp3Wjv4ghgU7zRVnNbKr7b0u8VJQfFOPuGwvs2Te1Hv5hTbm24RvJeT33DS7j4LKo+uCZI2FO+04bzto6Dy6Icd0ISheKeV/GEBqCtOvoBpD5JQvFPsIMtBFopwSuDryctDZX7Y8VSCUJkfdm9I9XKnBKbXU73Yye8YLIlCZX6RyRUEoGinuWO03QlAsU4rxosCUKxTxnjFCUBxTr7iQkEAinOaGi6U3PtA5XRT65dOHReq/o2gonuwBVfqk9OHet5JCCrjSntw+lAXnXpJ0VEJQA1e3bWS5uCIBKAGl0+9bGt0RCJQA06tpCV6RyQDNeDUU3BEWlADTpic04finQzq8uVdXz8Vyvfr++L6UIPbKjnoQ/FOBJU+FOFEUOlDEU5E2etD8U7EtK4PVXC1vnwCVMYNVX2ojDtq8lAJt7SpQy24pe7FoeabnCanDTX1B5wEofw9Ttk7bShfcb2WgvwlzI6L1bx8wkXxhiuVFPX3oy4uDFpeJ0ekATVhqLLN3hHJQPn+wB+SIlT9ntFOzEiSUJkmymkljFShFpCtjkgXaurPOk0iUL6BzI857SJQ+7O3QftWNKDWh5/U2KEBNYEPy8jvQQPKt2e3UCaIQO3PfhPluwjUim/XvkNVoAE1dQzUt+C4EkSgKgarK2M1QwQq4UJ1i+680EWgIq5WTg8dq9CA8g231A6sMkSgNtxUOtiSEIGKGI9Yr09dBOr6wDt18BUiUBvw5A0ZO0SgIvDkDRkrRKDuG3jzwaWwCNT26ETumwpUfHZlUKACVR89nSRBBSo96hShAhU6bqke/O8yUPtNTv5gWKtAzY86bVCBumkJ1cPBpbAMVHryzt+py0CFs3cjlHrNyVdIQB3M5D0v038k45y2UkecXIYMVKS/fvIxrimVUjr9jfEKHahKXYR8gRaXlFIuv+pHThN0oBb8vx7dbfmmA+X7g0+tJOhAJerHDCp0an4yqEw9+GtQgTuix6B26rlfg4rcc78GVaiZ3KAi9xZcgyrU5ZpB/TlDOYMan6EMiv7IMyjuD8qgIvf4j0EV6oVLBhW5f25QO7VtYFCB+27AoDK1NjCoAGoqN6hEbdgZlO/UVG5QCzeVG1SjTi8wqMhN5Qa1M3fQO4MK3OG0BrVxh9MaVKcWUQa1cOdnG1ShjoAyqMCdbGRQGzfyDKpRI8+gZm7kGVSmRp5BefzRalDUIqoF91UGtVOHiRlU4F6UZFArd4qfQVX8WwnuMIMK+F2J7iSDWrlTDg1qp173alAeAP7+UWdQC/dCToPKZXJEBhXccPZg4z/t0CEBAAAAw6D+rR/iZgIiIEqUKFEvUaJEiRIlSpQoUaJEiRIlqk+UKFGiRIkSJUqUKFGiRIkSJUqUKFGiRIkSJUqUKFGiAAAAAAAAAAAAAAAAoGFgJ6MP+LhP2QAAAABJRU5ErkJggg==);
+  background-size: 22px;
+  background-repeat: no-repeat;
+  background-position: 5px 6px;
+  border: 1px solid transparent;
+}
+.twitter.boxContainer .postButton:hover,
+.twitter.boxContainer .postButton:visited {
+  outline: none;
+}
+.twitter.boxContainer .postButton:visited {
+  outline: none;
+  box-shadow: 0 0 1px 2px rgba(88, 144, 255, 0.75), 0 1px 1px rgba(0, 0, 0, 0.15);
+}
+.twitter.boxContainer .postButton:active {
+  background-color: #3B5998;
+  border-color: #2f477a #314a7f #334c83;
+  box-shadow: 0 0 1px 2px rgba(88, 144, 255, 0.75), 0 1px 1px rgba(0, 0, 0, 0.15);
+}
+.twitter.boxContainer .close {
+  cursor: pointer;
+  float: right;
+  margin: 12px;
+  width: 10px;
+  height: 10px;
+  opacity: 0.6;
+}
+.twitter.boxContainer .close:hover {
+  opacity: 1;
+}
+.twitter.boxContainer .close:before,
+.twitter.boxContainer .close:after {
+  position: absolute;
+  content: ' ';
+  height: 13px;
+  width: 2px;
+  background-color: #333;
+}
+.twitter.boxContainer .close:before {
+  transform: rotate(45deg);
+}
+.twitter.boxContainer .close:after {
+  transform: rotate(-45deg);
+}

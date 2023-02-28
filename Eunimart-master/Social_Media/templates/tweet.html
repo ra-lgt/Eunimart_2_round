@@ -1,0 +1,66 @@
+<html>
+{% load static %}
+    <head>
+        <link rel="stylesheet" href="{% static 'css/tweet.css'%}">
+        <script>
+          document.querySelectorAll(".projcard-description").forEach(function(box) {
+  $clamp(box, {clamp: 6});
+});
+(function() {
+  //Not perfect but does the job
+  $(function() {
+    return $("#postMessage").keydown(function() {
+      var wordCount;
+      wordCount = 140 - $("#postMessage").val().length;
+      if (wordCount < 1) {
+        $("#postMessage").val($("#postMessage").val().substring(0, 139));
+        return $("#wordCounter").html(0);
+      } else {
+        return $("#wordCounter").html(wordCount);
+      }
+    });
+  });
+
+}).call(this);
+        </script>
+    </head>
+    <body>
+        {% for t_id,ids,name,data in datas %}
+      <div class="projcard-container">
+
+        <div class="projcard projcard-blue">
+            
+              <div class="projcard-title">{{name}}</div>
+              <br>
+              <div class="projcard-subtitle">Description</div>
+              <div class="projcard-bar"></div>
+              <br>
+              <div class="projcard-description">{{data}}</div>
+              <div class="projcard-tagbox">
+                
+            </div>
+        </div>
+     </div>
+     {% if user_id == ids %}
+                <a href="delete_tweet/{{t_id}}">Delete</a>
+                {% endif %}
+     {% endfor %}
+     
+        <div class="conta<link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+          <div class="contentContainer">
+
+            <div class="twitter boxContainer">
+              <label class="twitter tweetHeader">Compose new Tweet</label>
+              <span class="close"></span>
+              <div class="lineSplit"></div>
+		<form method="POST" action="tweet">
+      {% csrf_token %}
+              <textarea class="messageBox" name="user_tweet" placeholder="What's happening?"></textarea>
+              <label class="wordCounter" name="wordCounter">140</label>
+              <button>submit</button>
+</form>
+            </div>
+
+          </div>
+    </body>
+</html>
